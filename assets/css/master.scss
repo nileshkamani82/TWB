@@ -4,7 +4,7 @@ body {
   height: 100%;
   /* The html and body elements cannot have any padding or margin. */
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  background: url("../images/bg2.png") no-repeat center center fixed;
+  background: url("../images/bg2.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -114,7 +114,7 @@ body > .container { height: auto; min-height: 100%; }
 }
 
 #dashboard {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.5);
   min-height: 800px;
   height: 100%;
 
@@ -245,7 +245,7 @@ p {
 }
 
 .mentee {
-  background-image: url("images/christina.jpg");
+  background-image: url("../images/christina.jpg");
 }
 
 .panel-default>.panel-heading {
