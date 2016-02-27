@@ -2,14 +2,18 @@
 <head>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- animsition.css -->
+	<link rel="stylesheet" href="../dist/css/animsition.min.css">
+	<!-- chatbox.css -->
+	<link type="text/css" href="../assets/css/jquery.ui.chatbox.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="../assets/css/master.scss">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="../assets/js/jquery-ui.js"></script>
-	<link type="text/css" href="../assets/css/jquery.ui.chatbox.css" rel="stylesheet" />
 	<script type="text/javascript" src="../assets/js/jquery.ui.chatbox.js"></script>
-	
+
 </head>
 
 <body>
@@ -109,50 +113,28 @@
 
 		<script>
 
-		$("document").ready(function (){
+		var submitButton = $('#submit');
+		var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		var payload = {
+			email : $("#email").val(),
+			password : $("#password").val()
+		};
+		submitButton.click(function(){
 
-			$("#submit").click(function (){
-				var payload = {
-					email : $("#email").val(),
-					password : $("#password").val()
-				};
-				var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-				if (regex.test(payload.email) && payload.password ) {
-					$.ajax({
-						type: "POST",
-						contentType: "application/json",
-						url: "/login",
-						data: JSON.stringify(payload),
-						success: function( data ){
-							if (payload.email == "jhorwitz@live.unc.edu") {
-								location.href = "dashboard.html";
-							} else {
-								location.href = "dashboard_mentee_welcomeback.html";
-							}
-						}
-
-					});
-
-					// $.post("https://cd575a07.ngrok.io/login", {username : $("#email").val(), password : $("#password").val()}, function(data, status){
-					// 	alert("Data: " + data + "\nStatus: " + status);
-					// });
-				} else if (regex.test(payload.email)) {
+			if()
+			else if (regex.test(payload.email)) {
+				$(".emptyFieldWarning").show();
+				$(".invalidEmailWarning").hide();
+			} else {
+				$(".invalidEmailWarning").show();
+				if (!(payload.password)) {
 					$(".emptyFieldWarning").show();
-					$(".invalidEmailWarning").hide();
-				} else {
-					$(".invalidEmailWarning").show();
-					if (!(payload.password)) {
-						$(".emptyFieldWarning").show();
-					}
 				}
-				return false;
-			})
-
+			}
 		});
 
-
 		</script>
-
+<script src="../assets/js/main.js"></script>
 	</body>
 
 

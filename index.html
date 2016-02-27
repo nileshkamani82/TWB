@@ -2,19 +2,23 @@
 <head>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- animsition.css -->
+	<link rel="stylesheet" href="./dist/css/animsition.min.css">
+	<!-- chatbox.css -->
+	<link type="text/css" href="./assets/css/jquery.ui.chatbox.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="assets/css/master.scss">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
 	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<script type="text/javascript" src="../assets/js/jquery-ui.js"></script>
-	<link type="text/css" href="../assets/css/jquery.ui.chatbox.css" rel="stylesheet" />
-	<script type="text/javascript" src="../assets/js/jquery.ui.chatbox.js"></script>
+	<script type="text/javascript" src="./assets/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="./assets/js/jquery.ui.chatbox.js"></script>
+
 </head>
 
-<body>
+<body class="animsition">
 
-	<div class = "container-fluid">
+	<div class = "container-fluid ">
 		<div id = "wrap">
 			<div class = "row">
 
@@ -36,8 +40,10 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right">
-								<li><a href="pages/about.html">ABOUT</a></li>
-								<li><a href="pages/log_in.html">LOG IN</a></li>
+								<li>
+									<a href="pages/about.html" class="animsition-link">ABOUT</a>
+								</li>
+								<li><a href="pages/log_in.html" class="animsition-link">LOG IN</a></li>
 							</ul>
 						</div><!-- /.navbar-collapse -->
 					</div><!-- /.container-fluid -->
@@ -120,8 +126,14 @@
 			</div>
 		</div>
 
+		<script>
+		</script>
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<!-- animsition.js -->
+		<script src="./dist/js/animsition.min.js"></script>
+
+		<script src="./assets/js/main.js"></script>
 	</body>
-
-
 
 	</html>
